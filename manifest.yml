@@ -1,0 +1,13 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: TakeDemo003
+  host: TakeDemo003
+  disk_quota: 1024M
+  services:
+  - Retrieve and Rank-h1
+  - Speech To Text-h1
+  - Conversation-h1
+  - Availability Monitoring-df
