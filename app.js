@@ -23,8 +23,8 @@ app.use('/api/speech-to-text/', require('./stt-token.js'));
 // ------------------------------------
 var conversation = watson.conversation({
 	url: 'https://gateway.watsonplatform.net/conversation/api',
-	username: process.env.CONVERSATION_USERNAME || '{8c470cbd-de0f-4e11-88f0-967cdab7f16e}',
-	password: process.env.CONVERSATION_PASSWORD || '{c3D2eNZZ30UF}',
+	username: process.env.CONVERSATION_USERNAME || '8c470cbd-de0f-4e11-88f0-967cdab7f16e',
+	password: process.env.CONVERSATION_PASSWORD || 'c3D2eNZZ30UF',
 	version: 'v1',
 	version_date: '2016-12-15'
 });
@@ -54,8 +54,8 @@ app.post('/question', function(req, res, next) {
 // for R&R
 // ------------------------------------
 var retrieve_and_rank = watson.retrieve_and_rank({
-  username: '{20ac04f7-76fd-4dc9-8006-6b01e9237854}',
-  password: '{QVxkDtm3EaAK}',
+  username: '20ac04f7-76fd-4dc9-8006-6b01e9237854',
+  password: 'QVxkDtm3EaAK',
   version: 'v1'
 });
 
