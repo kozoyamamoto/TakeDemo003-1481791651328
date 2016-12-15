@@ -1,13 +1,18 @@
+declared-services:
+  stt-service:
+    label: speech_to_text
+    plan: standard
+  conv-service:
+    label: conversation
+    plan: free
 applications:
+- services:
+  - stt-service
+  - conv-service
 - path: .
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: TakeDemo003
-  host: TakeDemo003
-  disk_quota: 1024M
-  services:
-  - Retrieve and Rank-h1
-  - Speech To Text-h1
-  - Conversation-h1
-  - Availability Monitoring-df
+  name: take003
+  host: take003
+  disk_quota: 256M
