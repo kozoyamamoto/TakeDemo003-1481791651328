@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+	.bs-component {
+		position: relative;
+	}
+
+	input.btn{
+		background-color: #00649D;
+		color: #FFFFFF;
+	}
+
+	input.start {
+		width: 60px;
+		height: 30px;
+		float: right;
+		background-color: orange;
+		color: white;
+		border-radius: 5px;
+	}
+	
+	input.start.active{
+  		background-color: red;
+	}
+
+	div.result a{
+		text-align: center;
+	}
+
+	span.balloon-left {
+		position: relative;
+		z-index: 1;
+		max-width: 80%;
+		min-width: 10%;
+		margin: 15px auto;
+		padding: 13px;
+		background-color: #fff;
+		border-width: 3px;
+		border-style: solid;
+		border-radius: 10px;
+	}
+	span.balloon-left::before {
+		content: "";
+		display: inline;
+		position: absolute;
+		z-index: 10;
+		top: 10px;
+		width:  0;
+		height: 0;
+		border: 15px solid transparent;
+	}
+
+	span.balloon-left::after {
+		content: "";
+		display: inline;
+		position: absolute;
+		z-index: 100;
+		top: 10px;
+		width:  0;
+		height: 0;
+		border: 15px solid transparent;
+	}
+
+	/* balloon left */
+	span.balloon-left {
+		margin-left: 10px;
+		float: left;
+		border-color: #EEEEEE;
+		background-color: #EEEEEE;
+	}
+	span.balloon-left::before {
+		left: -31px;
+		border-right: 15px solid #EEEEEE;
+	}
+
+	span.balloon-left::after {
+		left: -26px;
+		border-right: 15px solid #EEEEEE;
+	}
+
+	table{
+		margin: 0 auto;
+	}
+
+	div.hiddenbody {
+		display: none;
+	}
+
+	body {
+		padding-top: 80px;
+		padding-bottom: 10%;
+	}
+
+	#QuestionText{
+		width: 70vw;
+		margin-left: 1%;
+	}
+    
+	div.title{
+		width: 85vw;
+		height: 40px;
+		background-color: lightgreen;
+		border: 1px solid #000000;
+		margin: 0 auto;
+	}
+  
+	div.detail{
+		width: 85vw;
+		height: 60vw;
+		background-color: lightyellow;
+		border: 1px solid #000000;
+		margin: 0 auto;
+	}
+  

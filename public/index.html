@@ -1,26 +1,71 @@
-<!DOCTYPE html>
-<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <head>
-    <title>NodeJS Starter Application</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
+	<title>R&Rデモ</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Hello World!</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
-  </body>
+<body style="font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;padding-top:20px;padding-botom:20px;">
 
-</html>
+	<!-- ワトソンのメッセージ部分
+	================================================== -->
+	<div class="watson_msg">
+	<span class="balloon-left" id="msgArea"></span>
+	</div>
+	
+	<!-- 会話入力部分
+	================================================== -->
+	<div class="input" id="inputArea">
+		<table>
+		<tr>
+			<td><input type="button" class="start" id="micButton" value="マイク"/></td>
+			<td><textarea class="form-control" rows="1"	id="QuestionText"	placeholder="メッセージを入力"></textarea></td>
+			<td><input type="button" value="送信" class="btn" onclick="askwatson($('#QuestionText').val());" /></td>
+		</tr>
+		</table>
+	</div>
+	<div>
+		
+	</div>
+	
+	<!-- 結果表示部分
+	================================================== -->
+	<div class="result" id="resultArea">
+		<div class="ranking" id="rankingArea">
+			<div class="title">
+			<dt><font color="blue"></font></dt>
+			<dt></dt>
+			</div>
+			<div class="title">
+			<dt><font color="blue"></font></dt>
+			<dt></dt>
+			</div>
+			<div class="title">
+			<dt><font color="blue"></font></dt>
+			<dt></dt>
+			</div>
+			<div class="title">
+			<dt><font color="blue"></font></dt>
+			<dt></dt>
+			</div>
+			<div class="title">
+			<dt><font color="blue"></font></dt>
+			<dt></dt>
+			</div>
+		</div>
+		<div class="detail" id="detailArea">
+		</div>
+	</div>
+	
+	<!-- JavaScript Section
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/readmore.js"></script>
+	<script src="js/demo.js"></script>
+	<script src="js/watson-speech.js"></script>
+
+</body>
