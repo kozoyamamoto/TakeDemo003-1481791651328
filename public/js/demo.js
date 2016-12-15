@@ -59,7 +59,7 @@ function askwatson(txt) {
 	type: "POST",
 	data: {
 		"question" : question,
-		"context"	: context
+		"context"　　　　: context
 	},
 	dataType: 'json',
 	})
